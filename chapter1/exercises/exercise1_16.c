@@ -2,6 +2,7 @@
 #define MAXLINE 5 /* maximum input line length */
 
 int _getline(char line[], int maxline);
+int is_whole_line(char line[], int len);
 void copy(char to[], char from[]);
 
 /* Exercise 1-16. Revise the main routine of the longest-line program so it will correctly print
@@ -15,14 +16,12 @@ int main()
         char longest[MAXLINE]; /* longest line saved here */
 
         while ((len = _getline(line, MAXLINE)) > 0) {
-
-                if (len == MAXLINE - 1 && line[len - 1] != '\n') {
+                if (is_whole_line(line, len)) {
                     while ((c=getchar())!=EOF && c!='\n')
                         ++len;
                     if (c == '\n')
                         ++len;
                 }
-
                 if (len > max){
                     max = len;
                     copy(longest, line);
@@ -35,6 +34,10 @@ int main()
                 else
                         printf("Len: %d; Line: [%s]\n", max, longest);
         return 0;
+}
+
+int is_whole_line(char line[], int len){
+    return (len == MAXLINE - 1 && line[len - 1] != '\n') ? -1 : 0;
 }
 
 /* getline: read a line into s, return length */
