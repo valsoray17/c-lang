@@ -6,8 +6,7 @@ int getline1(char line[], int maxline);
 void copy(char to[], char from[]);
 
 /* Exercise 1-17. Write a program to print all input lines that are longer than 80 characters. */
-int
-main()
+int main()
 {
         int len; /* current line length */
         int max; /* maximum length seen so far */
@@ -23,8 +22,7 @@ main()
 }
 
 /* getline: read a line into s, return length */
-int
-getline1(char s[],int lim)
+int getline1(char s[],int lim)
 {
         int c, i;
 
