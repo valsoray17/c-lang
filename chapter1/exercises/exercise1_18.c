@@ -17,7 +17,7 @@ int main()
     max = 0;
     while ((len = getline1(line, MAXLINE)) > 0)
         if ((len = remove_trailing(line, len)) > 0 && line[0] != '\n') {
-            printf("[%s]", line);
+            printf("%s", line);
         }
     return 0;
 }
