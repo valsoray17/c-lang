@@ -22,12 +22,12 @@ int main()
 void _reverse(char s[], int len)
 {
     char tmp;
-    if (s[len-1] == '\n')
+    if (s[len - 1] == '\n')
         len--;
-    for (int i = 0; i<len/2; i++){
+    for (int i = 0; i < len / 2; i++){
         tmp = s[i];
-        s[i] = s[len-1-i];
-        s[len-1-i] = tmp;
+        s[i] = s[len - 1 - i];
+        s[len - 1 - i] = tmp;
     }
 }
 
