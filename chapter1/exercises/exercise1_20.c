@@ -5,7 +5,7 @@
 proper number of blanks to space to the next tab stop. Assume a fixed set of
 tab stops, say every n columns. Should n be a variable or a symbolic parameter? */
 int main() {
-        int c, i = 0; /* current line length */
+	int c, i = 0; /* current line length */
 
 	while ((c = getchar()) != EOF){
 		i++;
@@ -24,5 +24,5 @@ int main() {
 		}
 	}
 
-        return 0;
+	return 0;
 }
